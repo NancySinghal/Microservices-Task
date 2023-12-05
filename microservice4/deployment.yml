@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservice4
+  template:
+    metadata:
+      labels:
+        app: microservice4
+    spec:
+      containers:
+      - name: microservice4
+        image: nancysinghal/microservice4
+        ports:
+        - containerPort: 5000

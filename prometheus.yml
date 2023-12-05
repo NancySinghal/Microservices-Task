@@ -1,0 +1,32 @@
+global:
+  scrape_interval: "15s"
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'hello-microservice'
+    static_configs:
+      - targets: ['192.168.49.2:30001']
+    metrics_path: /metrics
+
+  - job_name: 'todo-microservice'
+    static_configs:
+      - targets: ['192.168.49.2:30002']
+    metrics_path: /metrics
+
+  - job_name: 'greeting-microservice'
+    static_configs:
+      - targets: ['192.168.49.2:30003']
+    metrics_path: /metrics
+
+  - job_name: 'calculator-microservice'
+    static_configs:
+      - targets: ['192.168.49.2:30004']
+    metrics_path: /metrics
+
+  - job_name: 'coin-microservice'
+    static_configs:
+      - targets: ['192.168.49.2:30005']
+    metrics_path: /metrics

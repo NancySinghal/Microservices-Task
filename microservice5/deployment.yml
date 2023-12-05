@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice5
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservice5
+  template:
+    metadata:
+      labels:
+        app: microservice5
+    spec:
+      containers:
+      - name: microservice5
+        image: nancysinghal/microservice5
+        ports:
+        - containerPort: 5000

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservice3
+  template:
+    metadata:
+      labels:
+        app: microservice3
+    spec:
+      containers:
+      - name: microservice3
+        image: nancysinghal/microservice3
+        ports:
+        - containerPort: 5000
