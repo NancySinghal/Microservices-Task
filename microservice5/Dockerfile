@@ -8,6 +8,6 @@ COPY . /microservice5
 
 EXPOSE 5000
 
-ENV FLASK_APP=todo.py
+ENV FLASK_APP=coin.py
 
 CMD ["flask", "run", "--host", "0.0.0.0"]
